@@ -1,21 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-    font-family: "Poppins", sans-serif;
+    font-family: "Work Sans", sans-serif;
     color: #1A1A1A;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background-color: #E8E8E8;
+    background-color: #F4F4F5;
     display: block;
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 header {
     width: 95%;
     height: 50px;
-    background: #E8E8E8;
+    background: #F4F4F5;
     display: flex;
     align-items: center;
     border-radius: 12px;
@@ -42,8 +47,8 @@ header h {
     width: 95%;
     height: auto;
     margin: 2.5%;
-    margin-top: 20%;
-    margin-bottom: 20%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,14 +60,16 @@ header h {
     width: 90%;
     font-size: 20px;
     text-align: center;
-    font-weight: bold;
+    font-weight: 450;
     color: #28282d;
+    margin-bottom: 2.5%;
 }
 
 .sec1 a {
     color: #E8E8E8;
     background-color: #1A1A1A;
 }
+
 /* button  */
 .button-1 {
     all: unset;
@@ -131,7 +138,8 @@ header h {
     transform: translate(0, 5%);
 }
 
-.button h, p {
+.button h,
+p {
     color: #E8E8E8;
 }
 
@@ -149,13 +157,6 @@ header h {
     height: auto;
     margin: 2.5%;
     border-radius: 12px;
-}
-
-@media screen and (min-width: 900px) {
-    .carousel-container img {
-        width: 45%;
-        margin: 2.5%;
-    }
 }
 
 /*What I offer section*/
@@ -198,74 +199,6 @@ header h {
     margin-top: 16px;
     font-size: 12px;
     color: #28282d;
-}
-
-/*Chat collaboration*/
-.chat-container {
-    width: 100%;
-    border-radius: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.chat-container h {
-    font-size: 16px;
-    font-weight: 550;
-    color: #28282d;
-    margin: 20px;
-}
-
-.chat-container p {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-left: 20px;
-    font-size: 12px;
-}
-
-.message {
-    max-width: 80%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 18px;
-    font-size: 14px;
-    line-height: 1.4;
-}
-.message.left {
-    background-color: lightgray;
-    align-self: flex-start;
-    margin-left: 20px;
-}
-.message.right {
-    background-color: lightgray;
-    align-self: flex-end;
-    margin-left: 30%;
-    text-align: right;
-    max-width: 60%;
-    display: absolute;
-    position: right;
-}
-.message.right::after {
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    border-radius: 50%;
-    margin-left: 10px;
-    vertical-align: middle;
-}
-.message .highlight {
-    color: black;
-}
-.message .icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    border-radius: 50%;
-    margin-left: 10px;
-    vertical-align: middle;
-    position: relative;
 }
 
 /*Section 5*/
@@ -333,14 +266,122 @@ header h {
     margin-bottom: 0;
 }
 
-.plan> button> p {
+.plan>button>p {
     color: #E8E8E8;
 }
+
+/*Scroll section*/
+
+.scroll-section {
+    width: 95%;
+    margin: 2.5%;
+    margin-top: 10%;
+    margin-bottom: 0;
+    height: auto;
+    background: #28282D;
+    padding-top: 20px;
+    border-radius: 15px 15px 0 0;
+}
+
+.scroll-section h1 {
+    font-size: 24px;
+    color: #020617;
+    margin: 0px 12px 0 12px;
+}
+
+.scroll-section a {
+    background-color: #fff;
+}
+
+.scroll-section p {
+    font-size: 14px;
+    color: #fff;
+    margin-left: 12px;
+    margin: 20px 12px 0 12px;
+}
+
+.scroll-container {
+    width: 95%;
+    margin: 2.5%;
+    margin-top: 0;
+    max-width: auto;
+    background: #28282D;
+    padding: 20px;
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar for IE/Edge */
+    scroll-snap-type: x mandatory;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Chrome/Safari */
+}
+
+.scroll-box {
+    flex: 0 0 100px;
+    /* Fixed width */
+    height: 150px;
+    background: #F4F4F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: bold;
+    scroll-snap-align: center;
+    border-radius: 8px;
+}
+
+.scroll-box img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.scroll-box a {
+    color: black;
+}
+
+.scroll-box div {
+    width: 90%;
+    height: 50px;
+}
+
+.scroll-box p {
+    font-size: 16px;
+    font-weight: 300;
+    color: black;
+}
+
+.scroll-box h3 {
+    font-size: 20px;
+    font-weight: 450;
+    color: black;
+}
+
+.scroll-box d2 {
+    font-size: 12px;
+    font-weight: 300;
+    color: #2C7FFF;
+    align-self: center;
+    background: #52525C;
+    width: 500px;
+}
+
+/*Scroll section*/
 
 .footer {
     width: 100%;
     height: auto;
-    background: #E8E8E8;
+    background: transparent;
     margin-top: 48px;
     margin: 0;
     display: flex;
@@ -363,7 +404,8 @@ header h {
     margin: 10px;
     font-size: 12px;
     text-align: center;
-    color: #1A1A1A;;
+    color: #1A1A1A;
+    ;
 }
 
 .footer button {
@@ -410,14 +452,9 @@ header h {
 
 @media screen and (min-width: 900px) {
     body {
-        width: 69%;
-        margin-left: 15.5%;
-        margin-right: 15.5%;
-    }
-
-    .chat-container {
         width: 50%;
-        margin-left: auto;
+        margin-left: 25%;
+        margin-right: 25%;
     }
 
     .section5 {
@@ -437,4 +474,19 @@ header h {
     .scm-container {
         width: 60%;
     }
-}
+
+    .carousel-container {
+        width: 100%;
+        height: auto;
+        background: transparent;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .carousel-container img {
+        width: 30%;
+        margin: 1%;
+    }
+    }
